@@ -16,12 +16,14 @@ This component is responsible for the user interface, interaction design, and da
 ---
 
 ## Tech Stack
-| Layer | Technology |
-|-------|-------------|
-| Frontend | React (Create React App), JavaScript, CSS3 |
-| Backend Connection | RESTful API (Node.js / Express or FastAPI) |
-| Deployment | Docker Compose |
-| Version Control | Git + GitHub |
+
+| Layer              | Technology |
+|--------------------|-------------|
+| Frontend           | React (Create React App), JavaScript, CSS3 |
+| Backend Connection | RESTful API (Spring Boot Java backend) |
+| Deployment         | Docker Compose |
+| Version Control    | Git + GitHub |
+
 
 ---
 
