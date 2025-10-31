@@ -69,7 +69,7 @@ docker-compose up --build
 Then open http://localhost:3000 in your browser.
 
 ## Future Improvements
-Connect with production-level recommendation backend
-Add login and user preference management
-Integrate CDN optimization for static assets
-Improve accessibility and UI/UX responsiveness
+- Connect with production-level recommendation backend
+- Add login and user preference management
+- Integrate CDN optimization for static assets
+- Improve accessibility and UI/UX responsiveness
