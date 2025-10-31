@@ -28,19 +28,21 @@ This component is responsible for the user interface, interaction design, and da
 ## Project Structure
 ```
 TwitchF/
+│
 ├── public/
-│ ├── index.html # Root HTML template loaded by React
-│ └── assets/ # Static assets such as images or icons
+│   ├── index.html                     # Root HTML template loaded by React
+│   └── assets/                        # Static assets such as images or icons
 │
 ├── src/
-│ ├── components/ # Reusable React components (UI elements)
-│ ├── utils.js # Utility functions shared across components
-│ ├── App.js # Main React component, application entry logic
-│ ├── index.js # Entry point rendering <App /> to the DOM
-│ ├── index.css # Global CSS styling
-│ └── reportWebVitals.js # Performance metrics configuration
+│   ├── components/                    # Reusable React components (UI elements)
+│   ├── utils.js                       # Utility functions shared across components
+│   ├── App.js                         # Main React component, application entry logic
+│   ├── index.js                       # Entry point rendering <App /> to the DOM
+│   ├── index.css                      # Global CSS styling
+│   └── reportWebVitals.js             # Performance metrics configuration
 │
-└── package.json # Project metadata, dependencies, and scripts
+└── package.json                       # Project metadata, dependencies, and scripts
+
 ```
 
 ---
