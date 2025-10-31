@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# TwitchF: Frontend for Twitch Recommendation System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+TwitchF is the frontend part of a full-stack streaming recommendation system that provides personalized Twitch resource suggestions.  
+This component is responsible for the user interface, interaction design, and data visualization, communicating with the backend recommendation API to deliver customized video and stream recommendations.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
+- User-friendly interface for exploring Twitch streams and clips  
+- Real-time data retrieval from backend API  
+- Responsive layout optimized for desktop and mobile  
+- Modular React component structure for scalability  
+- Easy integration with Docker for deployment  
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
+| Layer | Technology |
+|-------|-------------|
+| Frontend | React (Create React App), JavaScript, CSS3 |
+| Backend Connection | RESTful API (Node.js / Express or FastAPI) |
+| Deployment | Docker Compose |
+| Version Control | Git + GitHub |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Project Structure
+TwitchF/
+├── public/
+│ ├── index.html
+│ └── assets/
+├── src/
+│ ├── components/
+│ ├── utils.js
+│ ├── App.js
+│ ├── index.js
+│ ├── index.css
+│ └── reportWebVitals.js
+└── package.json
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup and Run Locally
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Clone the repository
+```bash
+git clone https://github.com/Tzzziqi/TwitchF.git
+cd TwitchF
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Docker Deployment
+Build and run the application with Docker Compose:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+docker-compose up --build
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Then open http://localhost:3000
+ in your browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Improvements
+Connect with production-level recommendation backend
+Add login and user preference management
+Integrate CDN optimization for static assets
+Improve accessibility and UI/UX responsiveness
