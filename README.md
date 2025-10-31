@@ -20,7 +20,8 @@ This component is responsible for the user interface, interaction design, and da
 | Layer              | Technology |
 |--------------------|-------------|
 | Frontend           | React (Create React App), JavaScript, CSS3 |
-| Backend Connection | RESTful API (Spring Boot Java backend) |
+| Backend            | Spring Boot (Java), Maven |
+| Communication      | RESTful API (JSON) |
 | Deployment         | Docker Compose |
 | Version Control    | Git + GitHub |
 
