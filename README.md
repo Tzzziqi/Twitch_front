@@ -26,6 +26,7 @@ This component is responsible for the user interface, interaction design, and da
 ---
 
 ## Project Structure
+```
 TwitchF/
 ├── public/
 │ ├── index.html
@@ -38,7 +39,7 @@ TwitchF/
 │ ├── index.css
 │ └── reportWebVitals.js
 └── package.json
-
+```
 
 ---
 
@@ -48,16 +49,24 @@ TwitchF/
 ```bash
 git clone https://github.com/Tzzziqi/TwitchF.git
 cd TwitchF
+```
+### 2. Install dependencies
+```bash
+npm install
+```
 
+### 3. Start the development server
+```bash
+npm start
+```
 
 ## Docker Deployment
 Build and run the application with Docker Compose:
 
 ```bash
 docker-compose up --build
-
-Then open http://localhost:3000
- in your browser.
+```
+Then open http://localhost:3000 in your browser.
 
 ## Future Improvements
 Connect with production-level recommendation backend
