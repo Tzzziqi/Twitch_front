@@ -29,16 +29,18 @@ This component is responsible for the user interface, interaction design, and da
 ```
 TwitchF/
 ├── public/
-│ ├── index.html
-│ └── assets/
+│ ├── index.html # Root HTML template loaded by React
+│ └── assets/ # Static assets such as images or icons
+│
 ├── src/
-│ ├── components/
-│ ├── utils.js
-│ ├── App.js
-│ ├── index.js
-│ ├── index.css
-│ └── reportWebVitals.js
-└── package.json
+│ ├── components/ # Reusable React components (UI elements)
+│ ├── utils.js # Utility functions shared across components
+│ ├── App.js # Main React component, application entry logic
+│ ├── index.js # Entry point rendering <App /> to the DOM
+│ ├── index.css # Global CSS styling
+│ └── reportWebVitals.js # Performance metrics configuration
+│
+└── package.json # Project metadata, dependencies, and scripts
 ```
 
 ---
@@ -68,8 +70,3 @@ docker-compose up --build
 ```
 Then open http://localhost:3000 in your browser.
 
-## Future Improvements
-- Connect with production-level recommendation backend
-- Add login and user preference management
-- Integrate CDN optimization for static assets
-- Improve accessibility and UI/UX responsiveness
