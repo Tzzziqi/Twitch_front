@@ -1,7 +1,7 @@
-# TwitchF: Frontend for Twitch Recommendation System
+# VibePick_front: Frontend for Twitch Recommendation System
 
 ## Overview
-TwitchF is the frontend part of a full-stack streaming recommendation system that provides personalized Twitch resource suggestions.  
+VibePick_front is the frontend part of a full-stack streaming recommendation system that provides personalized Twitch resource suggestions.  
 This component is responsible for the user interface, interaction design, and data visualization, communicating with the backend recommendation API to deliver customized video and stream recommendations.
 
 ---
