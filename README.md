@@ -1,17 +1,8 @@
 # VibePick_front: Frontend for Twitch Recommendation System
 
 ## Overview
-VibePick_front is the frontend part of a full-stack streaming recommendation system that provides personalized Twitch resource suggestions.  
-This component is responsible for the user interface, interaction design, and data visualization, communicating with the backend recommendation API to deliver customized video and stream recommendations.
-
----
-
-## Features
-- User-friendly interface for exploring Twitch streams and clips  
-- Real-time data retrieval from backend API  
-- Responsive layout optimized for desktop and mobile  
-- Modular React component structure for scalability  
-- Easy integration with Docker for deployment  
+VibePick_front is the frontend part for **VibePick**, a content discovery and recommendation platform for live streams, videos, and clips.  
+The frontend is built with **React (Create React App)** and **Ant Design**, and communicates with the backend through REST APIs using cookie-based session authentication.
 
 ---
 
@@ -47,6 +38,78 @@ TwitchF/
 └── package.json                       # Project metadata, dependencies, and scripts
 
 ```
+---
+
+## Application Architecture
+
+### `App.js`
+- Serves as the root component of the application
+- Manages global state, including:
+  - User login status
+  - Favorite items
+  - Top game list
+  - Currently displayed resources
+- Defines the main layout using Ant Design `Layout`, including:
+  - Header
+  - Sidebar (game list and recommendations)
+  - Main content area
+
+---
+
+### `Home.js`
+- Renders the main content area
+- Displays **Streams**, **Videos**, and **Clips** using tab-based navigation
+- Receives resource data and favorite state from `App.js`
+- Propagates user interactions (e.g. favorite/unfavorite) back to the parent
+
+---
+
+### `Login.js`
+- Implements user login functionality
+- Uses Ant Design form components
+- On successful login, updates global authentication state in `App.js`
+
+---
+
+### `PageHeader.js`
+- Displays the application header
+- Shows login status and user-related actions
+- Triggers login modal when user is not authenticated
+
+---
+
+### `CustomSearch.js`
+- Provides custom search functionality
+- Allows users to search content based on selected criteria
+- Communicates search intent back to `App.js`
+
+---
+
+## API Layer (`src/utils.js`)
+
+All backend communication is centralized in `utils.js`.
+
+Key characteristics:
+- Uses the **Fetch API**
+- Sends requests with `credentials: 'include'` to maintain session-based authentication
+- Encapsulates all REST API calls to keep components clean and focused
+
+Typical responsibilities include:
+- User login and logout
+- Fetching top games
+- Searching content by game or category
+- Fetching recommendations
+- Managing user favorites
+
+---
+
+## Styling
+
+- Global styles are defined in `index.css`
+- Ant Design styles are imported globally
+- Layout-specific styles (sidebar scrolling, content background, spacing) are customized via CSS
+
+---
 
 ---
 
