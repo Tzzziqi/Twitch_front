@@ -25,15 +25,24 @@ TwitchF/
 │
 ├── public/
 │   ├── index.html                     # Root HTML template loaded by React
-│   └── assets/                        # Static assets such as images or icons
+│   └── assets/                        # Static assets (images, icons, etc.)
 │
 ├── src/
-│   ├── components/                    # Reusable React components (UI elements)
-│   ├── utils.js                       # Utility functions shared across components
-│   ├── App.js                         # Main React component, application entry logic
+│   ├── components/                    # Reusable React components
+│   │   ├── Home.js                    # Main content area (Streams / Videos / Clips tabs)
+│   │   ├── Login.js                   # Login modal and authentication form
+│   │   ├── PageHeader.js              # Application header (login status, user actions)
+│   │   └── CustomSearch.js            # Custom search component (e.g. by game/category)
+│   │
+│   ├── utils.js                       # Centralized API layer (fetch wrappers for backend)
+│   ├── App.js                         # Main React component, global state & layout logic
 │   ├── index.js                       # Entry point rendering <App /> to the DOM
-│   ├── index.css                      # Global CSS styling
-│   └── reportWebVitals.js             # Performance metrics configuration
+│   ├── index.css                      # Global CSS styling and Ant Design imports
+│   ├── App.css                        # App-level styles
+│   ├── App.test.js                    # Default Create React App test file
+│   ├── setupTests.js                  # Test configuration for CRA
+│   ├── reportWebVitals.js             # Performance metrics configuration
+│   └── logo.svg                       # Default CRA asset
 │
 └── package.json                       # Project metadata, dependencies, and scripts
 
