@@ -6,6 +6,30 @@ The frontend is built with **React (Create React App)** and **Ant Design**, and 
 
 ---
 
+## Key Features
+
+- **User Authentication**
+  - Supports user login via a modal interface
+  - Maintains authentication state using cookie-based sessions
+
+- **Content Browsing**
+  - Displays live streams, videos, and clips with tab-based navigation
+  - Fetches and renders content dynamically from the backend
+
+- **Personalized Recommendations**
+  - Shows recommended content based on user preferences
+  - Updates recommendations after user interactions
+
+- **Favorites Management**
+  - Allows users to favorite or unfavorite content items
+  - Synchronizes favorite state with the backend
+
+- **Search Functionality**
+  - Enables custom content search by game or category
+  - Triggers backend queries and updates displayed results
+
+---
+
 ## Tech Stack
 
 | Layer              | Technology |
@@ -15,7 +39,6 @@ The frontend is built with **React (Create React App)** and **Ant Design**, and 
 | Communication      | RESTful API (JSON) |
 | Deployment         | Docker Compose |
 | Version Control    | Git + GitHub |
-
 
 ---
 
@@ -47,76 +70,6 @@ TwitchF/
 └── package.json                       # Project metadata, dependencies, and scripts
 
 ```
----
-
-## Application Architecture
-
-### `App.js`
-- Serves as the root component of the application
-- Manages global state, including:
-  - User login status
-  - Favorite items
-  - Top game list
-  - Currently displayed resources
-- Defines the main layout using Ant Design `Layout`, including:
-  - Header
-  - Sidebar (game list and recommendations)
-  - Main content area
-
----
-
-### `Home.js`
-- Renders the main content area
-- Displays **Streams**, **Videos**, and **Clips** using tab-based navigation
-- Receives resource data and favorite state from `App.js`
-- Propagates user interactions (e.g. favorite/unfavorite) back to the parent
-
----
-
-### `Login.js`
-- Implements user login functionality
-- Uses Ant Design form components
-- On successful login, updates global authentication state in `App.js`
-
----
-
-### `PageHeader.js`
-- Displays the application header
-- Shows login status and user-related actions
-- Triggers login modal when user is not authenticated
-
----
-
-### `CustomSearch.js`
-- Provides custom search functionality
-- Allows users to search content based on selected criteria
-- Communicates search intent back to `App.js`
-
----
-
-## API Layer (`src/utils.js`)
-
-All backend communication is centralized in `utils.js`.
-
-Key characteristics:
-- Uses the **Fetch API**
-- Sends requests with `credentials: 'include'` to maintain session-based authentication
-- Encapsulates all REST API calls to keep components clean and focused
-
-Typical responsibilities include:
-- User login and logout
-- Fetching top games
-- Searching content by game or category
-- Fetching recommendations
-- Managing user favorites
-
----
-
-## Styling
-
-- Global styles are defined in `index.css`
-- Ant Design styles are imported globally
-- Layout-specific styles (sidebar scrolling, content background, spacing) are customized via CSS
 
 ---
 
